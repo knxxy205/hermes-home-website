@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f9fd" />
+    <meta
+      name="description"
+      content="Hermes Home membawa terminal SSH, pengelola file SFTP, dan chat AI ke dalam satu aplikasi Android."
+    />
+    <title>Hermes Home — Homeserver Anda, dalam genggaman</title>
+    <link rel="icon" type="image/png" href="asset/hermes-home-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Langsung ke konten</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Hermes Home, beranda">
+          <img src="asset/hermes-home-logo.png" alt="" width="42" height="42" />
+          <span>Hermes <b>Home</b></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Buka navigasi</span>
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
+          <a href="#fitur">Fitur</a>
+          <a href="#cara-kerja">Cara memulai</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.1-beta.1/Hermes-Home-v1.3.1-beta.1.apk">Unduh beta <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section-pad" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Aplikasi Android untuk homeserver · masih beta</p>
+            <h1>Homeserver Anda,<br />dalam genggaman.</h1>
+            <p class="hero-lede">
+              Satu tempat untuk membuka terminal, mengelola file server, dan berbincang dengan AI pilihan Anda.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.1-beta.1/Hermes-Home-v1.3.1-beta.1.apk">Unduh Android beta <span aria-hidden="true">↓</span></a>
+              <a class="button button-quiet" href="#fitur">Jelajahi fitur</a>
+            </div>
+            <div class="hero-facts" aria-label="Informasi aplikasi">
+              <span><span class="fact-check" aria-hidden="true">✓</span> Android 7.0+</span>
+              <span class="fact-divider" aria-hidden="true"></span>
+              <span>Beta 1.3.1</span>
+              <span class="fact-divider" aria-hidden="true"></span>
+              <span>Server milik Anda</span>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img class="hero-phone" src="asset/mockup-files.png" alt="Tampilan Hermes Home Files sebelum terhubung ke server" width="700" height="1400" fetchpriority="high" />
+          </div>
+        </div>
+        <p class="container hero-caption">SSH terminal <span></span> SFTP <span></span> Chat AI</p>
+      </section>
+
+      <section class="intro section-pad" id="fitur">
+        <div class="container intro-head">
+          <div>
+            <p class="eyebrow">Semua alat, satu aplikasi</p>
+            <h2>Lebih dekat ke server<br />yang Anda kelola sendiri.</h2>
+          </div>
+          <p class="section-intro">Dirancang untuk homelab dan self-hosting: akses praktis dari ponsel, dengan koneksi dan layanan tetap berada dalam kendali Anda.</p>
+        </div>
+      </section>
+
+      <section class="feature feature-terminal section-pad" aria-labelledby="terminal-title">
+        <div class="container feature-grid">
+          <div class="feature-visual terminal-visual">
+            <img src="asset/mockup-terminal.png" alt="Mockup terminal SSH Hermes Home dengan tema gelap" width="700" height="1400" loading="lazy" />
+          </div>
+          <div class="feature-copy">
+            <p class="feature-label">Terminal SSH</p>
+            <h2 id="terminal-title">Terminal yang ikut ke mana pun Anda pergi.</h2>
+            <p>Buka sesi SSH interaktif dari ponsel, pindah di antara beberapa sesi, dan gunakan tombol pintasan untuk perintah yang sering dipakai.</p>
+            <ul class="feature-points">
+              <li><span>✓</span> Beberapa sesi terminal</li>
+              <li><span>✓</span> Tombol pintasan dan kontrol arah</li>
+              <li><span>✓</span> Konfirmasi kunci host sebelum dipercaya</li>
+            </ul>
+            <p class="feature-footnote">Login SSH saat ini menggunakan nama pengguna dan kata sandi.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature feature-files section-pad" aria-labelledby="files-title">
+        <div class="container feature-grid reverse">
+          <div class="feature-copy">
+            <p class="feature-label">File SFTP</p>
+            <h2 id="files-title">File server, lebih mudah dijangkau.</h2>
+            <p>Jelajahi folder jarak jauh melalui SFTP. Cari file di dalam folder dan subfolder, lalu unggah atau rapikan file langsung dari Android.</p>
+            <ul class="feature-points">
+              <li><span>✓</span> Unggah, ubah nama, dan hapus file</li>
+              <li><span>✓</span> Pencarian rekursif yang bisa dibatalkan</li>
+              <li><span>✓</span> Pilih lokasi penyimpanan unduhan</li>
+            </ul>
+            <p class="feature-footnote">Tampilan contoh memperlihatkan Files sebelum terhubung ke server.</p>
+          </div>
+          <div class="feature-visual files-visual">
+            <img class="files-phone" src="asset/mockup-files.png" alt="Mockup layar Files Hermes Home" width="700" height="1400" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="feature feature-ai section-pad" aria-labelledby="ai-title">
+        <div class="container feature-grid">
+          <div class="feature-visual ai-visual">
+            <img src="asset/Screenshot_20261103-185533.jpg" alt="Tangkapan layar chat Hermes Home dengan backend AI" width="1080" height="2460" loading="lazy" />
+          </div>
+          <div class="feature-copy">
+            <p class="feature-label">Chat AI</p>
+            <h2 id="ai-title">AI chat yang terhubung ke layanan pilihan Anda.</h2>
+            <p>Atur Base URL, model, dan API key untuk endpoint yang kompatibel dengan OpenAI. Anda juga bisa mengirim isi file untuk dibahas.</p>
+            <ul class="feature-points">
+              <li><span>✓</span> Gunakan endpoint hosted atau self-hosted</li>
+              <li><span>✓</span> Minta penjelasan dari file pilihan</li>
+              <li><span>✓</span> Tinjau saran perintah sebelum menjalankannya</li>
+            </ul>
+            <p class="feature-footnote">Kemampuan agent bergantung pada backend. Perintah yang disarankan tidak dijalankan otomatis.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy-band section-pad">
+        <div class="container privacy-inner">
+          <div class="privacy-mark" aria-hidden="true">HH</div>
+          <div><p class="eyebrow">Tetap di tangan Anda</p><h2>Server Anda. Jaringan Anda. Pilihan Anda.</h2></div>
+          <p>Gunakan LAN atau jaringan privat seperti Tailscale untuk mengakses homeserver. Hermes Home tidak menyediakan server, cloud backend, atau layanan AI.</p>
+        </div>
+      </section>
+
+      <section class="getting-started section-pad" id="cara-kerja">
+        <div class="container">
+          <div class="center-heading">
+            <p class="eyebrow">Mulai dengan yang Anda punya</p>
+            <h2>Siapkan koneksi dalam beberapa langkah.</h2>
+            <p>Hermes Home terhubung ke infrastruktur yang sudah Anda kelola.</p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card"><span class="step-index">01</span><div class="step-icon">⌂</div><h3>Siapkan akses privat</h3><p>Pastikan ponsel dan homeserver dapat saling menjangkau lewat LAN atau jaringan privat.</p></article>
+            <article class="step-card"><span class="step-index">02</span><div class="step-icon">›_</div><h3>Simpan profil SSH</h3><p>Masukkan host, port, nama pengguna, dan kata sandi server di aplikasi.</p></article>
+            <article class="step-card"><span class="step-index">03</span><div class="step-icon">✳</div><h3>Tambahkan AI bila perlu</h3><p>Hubungkan endpoint OpenAI-compatible Anda untuk memakai fitur chat.</p></article>
+          </div>
+          <div class="requirements"><span class="requirement-title">Yang dibutuhkan</span><span>Android 7.0 atau lebih baru</span><span>Server SSH/SFTP</span><span>Jaringan LAN atau privat</span><span>Endpoint AI opsional</span></div>
+        </div>
+      </section>
+
+      <section class="screenshots section-pad" id="screenshots">
+        <div class="container screenshot-heading">
+          <div><p class="eyebrow">Lihat lebih dekat</p><h2>Antarmuka yang terasa familier.</h2></div>
+          <p>Dirancang untuk ponsel, dengan ruang yang cukup untuk fokus pada pekerjaan.</p>
+        </div>
+        <div class="container screenshot-grid">
+          <figure class="screenshot-card screenshot-login"><img src="asset/mockup-login.png" alt="Layar kunci Hermes Home" width="700" height="1400" loading="lazy" /><figcaption><span>01</span> Akses aplikasi</figcaption></figure>
+          <figure class="screenshot-card screenshot-terminal"><img src="asset/mockup-terminal.png" alt="Terminal SSH Hermes Home" width="700" height="1400" loading="lazy" /><figcaption><span>02</span> Terminal SSH</figcaption></figure>
+          <figure class="screenshot-card screenshot-files"><img src="asset/mockup-files.png" alt="Pengelola file SFTP Hermes Home" width="700" height="1400" loading="lazy" /><figcaption><span>03</span> File SFTP</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="faq section-pad" id="faq">
+        <div class="container faq-grid">
+          <div class="faq-intro"><p class="eyebrow">Pertanyaan umum</p><h2>Yang perlu diketahui sebelum mulai.</h2><p>Hermes Home adalah klien untuk server dan layanan yang Anda siapkan sendiri.</p></div>
+          <div class="faq-list">
+            <details><summary>Apakah Hermes Home menyediakan homeserver?</summary><p>Tidak. Anda perlu menyiapkan server sendiri dan memastikan ponsel dapat mengaksesnya melalui LAN atau jaringan privat.</p></details>
+            <details><summary>Bisakah saya menggunakan Tailscale?</summary><p>Bisa. LAN dan jaringan privat seperti Tailscale direkomendasikan untuk menjangkau homeserver.</p></details>
+            <details><summary>Apakah fitur chat AI sudah termasuk layanan AI?</summary><p>Tidak. Anda mengatur endpoint OpenAI-compatible dan menyediakan API key serta layanan AI sendiri. Anda juga bisa memakai backend self-hosted yang sesuai.</p></details>
+            <details><summary>Apakah Hermes Home sudah rilis stabil?</summary><p>Belum. Versi yang direkomendasikan adalah 1.3.1-beta.1 dan tetap berstatus beta.</p></details>
+            <details><summary>Bagaimana status unduhan beta?</summary><p>Beta 1.3.1 tersedia publik di GitHub. Ini tetap rilis beta, bukan versi stabil.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="beta section-pad" id="beta">
+        <div class="container beta-panel">
+          <div class="beta-content">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Hermes Home 1.3.1-beta.1</p>
+            <h2>Coba beta Android.</h2>
+            <p>Versi 1.3.1-beta.1 tersedia untuk dicoba. Hermes Home masih dalam tahap beta dan memerlukan server SSH/SFTP milik Anda.</p>
+            <a class="button button-primary beta-download" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.1-beta.1/Hermes-Home-v1.3.1-beta.1.apk">Unduh Hermes Home <span aria-hidden="true">↓</span></a>
+            <a class="release-link" href="https://github.com/knxxy205/Hermes-Home/releases/tag/v1.3.1-beta.1" target="_blank" rel="noreferrer">Lihat catatan rilis di GitHub ↗</a>
+            <div class="beta-meta"><span class="beta-lock" aria-hidden="true">●</span> Rilis beta, bukan versi stabil <span class="beta-separator">·</span> Android 7.0+</div>
+          </div>
+          <div class="beta-visual"><img src="asset/mockup-login.png" alt="Tampilan login Hermes Home" width="700" height="1400" loading="lazy" /></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand-block"><a class="brand footer-brand" href="#top"><img src="asset/hermes-home-logo.png" alt="" width="42" height="42" /><span>Hermes <b>Home</b></span></a><p>Homeserver Anda, dalam genggaman.</p><span class="footer-beta">Android · Beta 1.3.1</span></div>
+        <div class="footer-links"><div><h2>Jelajahi</h2><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara memulai</a><a href="#faq">FAQ</a></div><div><h2>Proyek</h2><a href="https://github.com/knxxy205/Hermes-Home" target="_blank" rel="noreferrer">Repositori <span aria-hidden="true">↗</span></a><a href="https://github.com/knxxy205/Hermes-Home/issues" target="_blank" rel="noreferrer">Laporkan masalah <span aria-hidden="true">↗</span></a></div><div><h2>Dokumen</h2><a href="https://github.com/knxxy205/Hermes-Home/blob/main/PRIVACY.md" target="_blank" rel="noreferrer">Privasi <span aria-hidden="true">↗</span></a><a href="https://github.com/knxxy205/Hermes-Home/blob/main/LICENSE" target="_blank" rel="noreferrer">Lisensi GPL-3.0 <span aria-hidden="true">↗</span></a></div></div>
+      </div>
+      <div class="container footer-bottom"><span>© 2026 Hermes Home contributors</span><span>Aplikasi Android sumber terbuka · GPL-3.0-only</span></div>
+    </footer>
+  </body>
+</html>
