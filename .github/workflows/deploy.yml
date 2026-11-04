@@ -25,19 +25,16 @@ jobs:
       - name: Check out website
         uses: actions/checkout@v6
 
+      - name: Prepare static website
+        run: |
+          mkdir -p _site/asset
+          cp index.html styles.css script.js _site/
+          cp asset/hermes-home-logo.png asset/mockup-files.png asset/mockup-login.png asset/mockup-terminal.png asset/Screenshot_20261103-185533.jpg _site/asset/
+
       - name: Upload static website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: |
-            index.html
-            styles.css
-            script.js
-            .nojekyll
-            asset/hermes-home-logo.png
-            asset/mockup-files.png
-            asset/mockup-login.png
-            asset/mockup-terminal.png
-            asset/Screenshot_20261103-185533.jpg
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
