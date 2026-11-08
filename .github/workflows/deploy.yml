@@ -29,7 +29,8 @@ jobs:
         run: |
           mkdir -p _site/asset
           cp index.html styles.css script.js _site/
-          cp asset/hermes-home-logo.png asset/mockup-files.png asset/mockup-login.png asset/mockup-terminal.png asset/Screenshot_20261103-185533.jpg _site/asset/
+          cp asset/hermes-home-logo.png _site/asset/
+          cp -R image _site/image
 
       - name: Upload static website
         uses: actions/upload-pages-artifact@v4
