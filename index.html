@@ -43,7 +43,7 @@
           <a href="#tampilan">Tampilan</a>
           <a href="#mulai">Cara memulai</a>
           <a href="#faq">FAQ</a>
-          <a class="nav-cta" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.1-beta.1/Hermes-Home-v1.3.1-beta.1.apk">Unduh beta <span aria-hidden="true">↓</span></a>
+          <a class="nav-cta" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.2-beta.1/Hermes-Home-v1.3.2-beta.1.apk">Unduh beta <span aria-hidden="true">↓</span></a>
         </nav>
       </div>
     </header>
@@ -56,7 +56,7 @@
             <h1>Server Anda,<br />lebih dekat.</h1>
             <p class="hero-lede">Terminal SSH, pengelola file SFTP, dan Hermes Chat dalam satu aplikasi Android. Hubungkan ke server dan layanan yang Anda pilih sendiri.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.1-beta.1/Hermes-Home-v1.3.1-beta.1.apk">Unduh 1.3.1-beta.1 <span aria-hidden="true">↓</span></a>
+              <a class="button button-primary" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.2-beta.1/Hermes-Home-v1.3.2-beta.1.apk">Unduh 1.3.2-beta.1 <span aria-hidden="true">↓</span></a>
               <a class="button button-secondary" href="https://github.com/knxxy205/Hermes-Home">Lihat source ↗</a>
             </div>
             <ul class="hero-facts" aria-label="Informasi aplikasi">
@@ -64,7 +64,7 @@
               <li>Empat tab</li>
               <li>Open source · GPL-3.0-only</li>
             </ul>
-            <p class="release-note">Unduhan publik saat ini masih beta 1.3.1. Source 1.3.2 sedang disiapkan; belum tersedia sebagai APK rilis.</p>
+            <p class="release-note">Beta publik 1.3.2-beta.1 tersedia untuk diunduh. Ini versi beta, belum rilis stabil.</p>
           </div>
           <figure class="hero-art">
             <img src="image/readme-banner.png" alt="Banner Hermes Home dengan tampilan Chat, Terminal, dan Pengaturan pada tiga layar Android" width="1280" height="560" fetchpriority="high" />
@@ -234,14 +234,14 @@
         <div class="container release-panel">
           <div class="release-copy">
             <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Rilis publik</p>
-            <h2 id="release-title">1.3.1-beta.1</h2>
-            <p>Ini APK Hermes Home terbaru yang saat ini tersedia di GitHub Releases. Statusnya beta, belum rilis stabil.</p>
-            <a class="button button-primary" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.1-beta.1/Hermes-Home-v1.3.1-beta.1.apk">Unduh APK beta 1.3.1 <span aria-hidden="true">↓</span></a>
-            <a class="release-link" href="https://github.com/knxxy205/Hermes-Home/releases/tag/v1.3.1-beta.1" target="_blank" rel="noreferrer">Catatan rilis dan checksum ↗</a>
+            <h2 id="release-title">1.3.2-beta.1</h2>
+            <p>Ini APK beta terbaru yang tersedia di GitHub Releases. Hermes Home masih beta, belum rilis stabil.</p>
+            <a class="button button-primary" href="https://github.com/knxxy205/Hermes-Home/releases/download/v1.3.2-beta.1/Hermes-Home-v1.3.2-beta.1.apk">Unduh APK beta 1.3.2 <span aria-hidden="true">↓</span></a>
+            <a class="release-link" href="https://github.com/knxxy205/Hermes-Home/releases/tag/v1.3.2-beta.1" target="_blank" rel="noreferrer">Catatan rilis dan checksum ↗</a>
           </div>
           <div class="source-status">
-            <span class="status-label">Versi source</span><strong>1.3.2 · versionCode 6</strong>
-            <p>PR #2 sudah tergabung. Fitur dan tampilan di halaman ini mengikuti source terbaru. Kandidat signed beta masih menunggu pemeriksaan update dengan data lama dan pemeriksaan di ponsel; 1.3.2 belum tersedia untuk diunduh.</p>
+            <span class="status-label">Beta publik dan source</span><strong>1.3.2-beta.1 · versionCode 6</strong>
+            <p>Rilis signed ini sudah terbit dan memakai identitas aplikasi utama. Pemeriksaan build, paket, sertifikat, instalasi baru, autentikasi perangkat, dan navigasi empat tab lolos di emulator Android 14. Konfirmasi update dengan data lama di ponsel fisik masih diperlukan.</p>
             <a href="https://github.com/knxxy205/Hermes-Home/blob/main/CHANGELOG.md" target="_blank" rel="noreferrer">Lihat changelog ↗</a>
           </div>
           <div class="update-note">
@@ -279,10 +279,10 @@
             <details><summary>Provider AI apa yang didukung?</summary><p>9router atau server custom yang kompatibel dengan OpenAI, Google Gemini, OpenAI, Claude/Anthropic, dan OpenRouter. Anda mengatur URL, key, dan model sendiri.</p></details>
             <details><summary>Apakah semua model mendukung /effort?</summary><p>Tidak. Pilihan disimpan untuk pesan berikutnya dan nilai default mengikuti model. Field hanya dikirim ke provider dan keluarga model yang dikenali; model tak dikenal serta endpoint custom tidak menerima override. Dukungan juga bergantung pada model/API.</p></details>
             <details><summary>Apakah SSH tetap aktif saat berpindah tab?</summary><p>Berpindah tab tidak langsung memutus sesi. Foreground service menjaga sesi dalam lingkup aplikasi dan menampilkan notifikasi, tetapi jaringan, server, pembatasan Android, force-stop, atau penghapusan task dapat memutusnya.</p></details>
-            <details><summary>Bagaimana update tanpa kehilangan data?</summary><p>Pasang rilis bertanda tangan yang sama package dan signing identity-nya di atas aplikasi lama. Jangan uninstall atau hapus data. Source 1.3.2 masih menunggu uji update tersimpan di perangkat sebelum beta baru dipublikasikan.</p></details>
+            <details><summary>Bagaimana update tanpa kehilangan data?</summary><p>Rilis 1.3.2-beta.1 memakai package dan sertifikat yang sama dengan beta utama sebelumnya. Pasang di atas aplikasi lama, jangan uninstall atau hapus data. Update dengan data tersimpan masih perlu dikonfirmasi di ponsel fisik, jadi buat backup profil dan verifikasi data penting setelah pembaruan.</p></details>
             <details><summary>Mengapa muncul dua aplikasi Hermes Home?</summary><p>Aplikasi utama dan preview memakai package berbeda. Preview dapat dipasang berdampingan untuk pengujian, tetapi datanya terpisah dan tidak otomatis bergabung dengan aplikasi utama.</p></details>
             <details><summary>Apa batasan transfer SFTP?</summary><p>Download folder belum ada dan download file tidak otomatis melanjutkan setelah proses aplikasi dimatikan. Retry upload tidak menjamin melanjutkan dari byte terakhir; folder yang masih berisi tidak dapat dihapus. Pencarian juga dibatasi hasil, kedalaman, folder, dan waktu.</p></details>
-            <details><summary>Apakah APK yang tersedia sudah stabil?</summary><p>Belum. Rilis publik yang tersedia saat ini adalah 1.3.1-beta.1. Source 1.3.2 sudah tergabung di main, tetapi signed beta-nya masih menunggu pemeriksaan update dengan data lama dan pemeriksaan di ponsel.</p></details>
+            <details><summary>Apakah APK yang tersedia sudah stabil?</summary><p>Belum. Versi publik terbaru adalah 1.3.2-beta.1 dan statusnya masih beta. Pemeriksaan update dengan data lama di ponsel fisik masih perlu dikonfirmasi.</p></details>
           </div>
         </div>
       </section>
@@ -296,7 +296,7 @@
           <div><h2>Dokumen</h2><a href="https://github.com/knxxy205/Hermes-Home/blob/main/PRIVACY.md" target="_blank" rel="noreferrer">Privasi ↗</a><a href="https://github.com/knxxy205/Hermes-Home/blob/main/SECURITY.md" target="_blank" rel="noreferrer">Keamanan ↗</a><a href="https://github.com/knxxy205/Hermes-Home/blob/main/LICENSE" target="_blank" rel="noreferrer">Lisensi GPL-3.0 ↗</a><a href="https://github.com/knxxy205/Hermes-Home/blob/main/README.md" target="_blank" rel="noreferrer">README lengkap ↗</a></div>
         </nav>
       </div>
-      <div class="container footer-bottom"><span>© 2026 Hermes Home contributors</span><span>Fitur di atas mengikuti source 1.3.2; APK publik masih 1.3.1-beta.1.</span></div>
+      <div class="container footer-bottom"><span>© 2026 Hermes Home contributors</span><span>APK publik: 1.3.2-beta.1 · Beta, belum stabil.</span></div>
     </footer>
   </body>
 </html>
